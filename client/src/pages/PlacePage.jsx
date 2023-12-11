@@ -38,7 +38,7 @@ export default function PlacePage() {
             </div>
             Check-in: {place.checkIn} <br/>
             Check-out: {place.checkOut} <br/>
-            Max number of guests: {place.maxGuest} <br/>
+            Max number of guests: {place.maxGuests} <br/>
             
         </div>
         <div>
