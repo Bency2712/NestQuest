@@ -11,9 +11,9 @@ const fs = require('fs');
 const multer = require('multer');
 const mime = require('mime-types');
 
-const Place = require('./models/place.js');
-const User=require('./models/user.js');
-const Booking = require('./models/booking.js');
+const Place = require('api/models/place.js');
+const User=require('api/models/user.js');
+const Booking = require('api/models/booking.js');
 
 require('dotenv').config();
 const app=express();
