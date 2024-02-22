@@ -40,7 +40,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Configuring Cross-Origin Resource Sharing (CORS)
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173'
+    origin: 'http://localhost:5174'
 }));
 
 // Function to upload files to AWS S3
