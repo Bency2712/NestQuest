@@ -1,55 +1,81 @@
 /* eslint-disable react/no-unescaped-entities */
-import {Link, Navigate} from "react-router-dom";
-import { useContext, useState } from "react";
-import axios from "axios";
-import { UserContext } from "../UserContext";
+// Importing necessary modules and components
+import { Link, Navigate } from "react-router-dom";  // React Router's Link and Navigate components for navigation
+import { useContext, useState } from "react";  // React hooks for context and state
+import axios from "axios";  // HTTP client for making requests
+import { UserContext } from "../UserContext";  // Custom UserContext for managing user data
 
-export default function LoginPage()
-{
-    const [email, setEmail]= useState('');
-    const [password, setPassword]= useState('');
-    const [redirect, setRedirect]=useState(false);
-    const {setUser}=useContext(UserContext);
+// Functional component for the Login page
+export default function LoginPage() {
+    // State variables for managing email, password, and redirection
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [redirect, setRedirect] = useState(false);
+
+    // Accessing user context to set user data
+    const { setUser } = useContext(UserContext);
+
+    // Handling login form submission
     async function handleLoginSubmit(ev) {
         ev.preventDefault();
-        try{
-            const data = await axios.post('/login', {email,password});
-            setUser(data);
+        try {
+            // Sending a login request to the server
+            const response = await axios.post('/login', { email, password });
+
+            // Setting user context with the received data
+            setUser(response.data);
+
+            // Showing a success message and triggering redirection
             alert('Login Successful');
             setRedirect(true);
-        }
-        catch (e) {
+        } catch (e) {
+            if(e.response && e.response.status === 429){
+                alert(e.response.data.payload);
+            }
+            else{
+            // Showing an error message on login failure
             alert('Login Failed');
+            }
         }
     }
 
-//if the login is successful, we navigate it to a new page
-    if (redirect)
-    {
-        return <Navigate to ={'/'} />
+    // Redirecting to the home page if login was successful
+    if (redirect) {
+        return <Navigate to={'/'} />;
     }
-    return(
+
+    // Rendering the login form
+    return (
         <div className="mt-4 grow flex items-center justify-around">
             <div className="mb-64">
-            <h1 className="text-4xl text-center mb-4">Login</h1>
-            <form className="max-w-md mx-auto" onSubmit={handleLoginSubmit}>
-                <input type="email" 
-                       placeholder="your@email.com" 
-                       value={email} 
-                       onChange={ev => setEmail(ev.target.value)}/>
+                {/* Login form */}
+                <h1 className="text-4xl text-center mb-4">Login</h1>
+                <form className="max-w-md mx-auto" onSubmit={handleLoginSubmit}>
+                    {/* Email input */}
+                    <input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={email}
+                        onChange={ev => setEmail(ev.target.value)}
+                    />
 
-                <input type="password"
-                       placeholder="password" 
-                       value={password} 
-                       onChange={ev => setPassword(ev.target.value)}/>
+                    {/* Password input */}
+                    <input
+                        type="password"
+                        placeholder="password"
+                        value={password}
+                        onChange={ev => setPassword(ev.target.value)}
+                    />
 
-                <button className="primary">Login</button>
+                    {/* Login button */}
+                    <button className="primary">Login</button>
 
-                <div className="text-center py-2 text-gray-500">
-                    Don't have an account yet?  <Link className="underline text-black" to={'/register'}>Register now</Link>
-                </div>
-            </form>
-        </div>
+                    {/* Link to register page */}
+                    <div className="text-center py-2 text-gray-500">
+                        Don't have an account yet? <Link className="underline text-black" to={'/register'}>Register now</Link>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
