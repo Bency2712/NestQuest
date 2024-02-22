@@ -118,7 +118,7 @@ catch(e)
 
 //limiting login attempts
 const loginLimiter = limiter(
-    {windowMs: 1 * 60 * 1000,
+    {windowMs: 15 * 60 * 1000,
     max: 3,
     handler:(req,res)=>{
         console.log(req.rateLimit);
