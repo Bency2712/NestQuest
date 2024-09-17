@@ -53,32 +53,43 @@ accommodations
 ### From Operations to Pages:
 I have used Node.js and Express.js for backend, react for frontend and MongoDB for Database
 I have completed the following pages and the remaining ones are in progress
+
+
 **Home Page:**
 <img width="486" alt="image" src="https://github.com/user-attachments/assets/efdfaaa3-4761-4d31-a099-f74ecf295053">
+
 
 **Login Page**
 <img width="481" alt="image" src="https://github.com/user-attachments/assets/56102633-7c42-43ce-9394-cd8be2e4b140">
 
+
 **Registration Page**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/7deff96e-46e5-4640-8702-7aad830bd66a">
+
 
 **Profile Page:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/1fb7bc9f-2f01-455d-9dc6-d044fcaa3d19">
 
+
 **Bookings Page:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/8712c5d3-7998-4c7e-9c1d-3efa1b65a8ab">
+
 
 **Accomodations Page:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/a34dae5f-c369-4df1-8d83-83d558144570">
 
+
 **Add New Accommodation:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/18fe3d51-387b-4fa3-baa8-71b88047cdde">
+
 
 **Places Details:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/030ca902-b7b6-46e0-93b6-e694b1405555">
 
+
 **Show More Photos:**
 <img width="540" alt="image" src="https://github.com/user-attachments/assets/048def29-8030-40e8-b5d6-04000d17d37d">
+
 
 ## Database design schema
 
