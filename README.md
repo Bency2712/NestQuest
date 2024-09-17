@@ -4,10 +4,10 @@ Accomodation Booking application
 Web Link: https://nest-quest-accomodation-booking.vercel.app/
 
 
-### Introduction:
+## Introduction:
 The project aims to develop a comprehensive booking app that simplifies the process of reserving accommodations and experiences. In today's fast-paced world, travelers often seek a quick and convenient way to book stays, activities, and services. Our solution, the ‘NestQuest’ app, will address this need by offering a user-friendly platform for users to schedule and manage a wide range of bookings effortlessly.
 
-**Unique Features/Novelty:**
+#### Unique Features/Novelty:
 
 • User profiles with profile-specific information
 
@@ -20,7 +20,7 @@ The project aims to develop a comprehensive booking app that simplifies the proc
 
 
 
-### Modules:
+## Modules:
 
 • Authentication and User Management: This module will handle user registration, login,and profile management.
 
@@ -29,7 +29,7 @@ The project aims to develop a comprehensive booking app that simplifies the proc
 • Booking Management: This module will handle booking requests, adding specific bookings to the user profiles
 
 
-### Modules to Operations:
+## Modules to Operations:
 
 • Create New Accommodations: Users can easily add new accommodation listings by providing general information about the property, such as Title, address, and occupancy details. They can also describe the property's unique features and amenities, set pricing,and availability, and upload images to showcase their space.
 
@@ -42,7 +42,7 @@ The project aims to develop a comprehensive booking app that simplifies the proc
 • Send Booking Requests: Guests can send booking requests to hosts for specific accommodations
 
 
-### From Operations to Pages:
+## From Operations to Pages:
 
 I have used Node.js and Express.js for backend, react for frontend and MongoDB for Database I have completed the following pages and the remaining ones are in progress
 
