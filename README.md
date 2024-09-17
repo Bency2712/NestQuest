@@ -12,7 +12,8 @@ and convenient way to book stays, activities, and services. Our solution, the �
 will
 address this need by offering a user-friendly platform for users to schedule and manage a
 wide range of bookings effortlessly.
-Unique Features/Novelty:
+
+### Unique Features/Novelty:
 • User profiles with profile-specific information
 • Implement a strong booking system with booking calendars, and support for multiple
 booking options system
